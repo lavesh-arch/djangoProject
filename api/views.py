@@ -15,3 +15,8 @@ def product_list(request):
         {"id": 3, "name": "Headphones", "price": 199.99},
     ]
     return Response(products)
+
+@api_view(['GET'])
+def product_detail(request, product_id):
+    product = {"id": product_id, "name": f"Product {product_id}", "price": 99.99}
+    return Response(product)
