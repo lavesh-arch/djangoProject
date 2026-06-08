@@ -20,3 +20,7 @@ def product_list(request):
 def product_detail(request, product_id):
     product = {"id": product_id, "name": f"Product {product_id}", "price": 99.99}
     return Response(product)
+
+@api_view(['GET'])
+def login(request):
+    return Response({"message": "Login endpoint - to be implemented"})
