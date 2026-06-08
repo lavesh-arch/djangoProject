@@ -22,5 +22,9 @@ def product_detail(request, product_id):
     return Response(product)
 
 @api_view(['GET'])
+def login(request):
+    return Response({"message": "Login endpoint - to be implemented"})
+    
+@api_view(['GET'])
 def signup(request):
     return Response({"message": "Signup endpoint - to be implemented"})
